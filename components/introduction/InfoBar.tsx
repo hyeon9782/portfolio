@@ -1,9 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { GithubIcon, NotionIcon, VelogIcon } from "../shared/icons";
+import { EmailIcon, GithubIcon, NotionIcon, VelogIcon } from "../shared/icons";
 
 const INFO = [
+  {
+    url: "mailto:hyeon9782@gmail.com",
+    icon: <EmailIcon />,
+  },
   {
     url: "https://github.com/hyeon9782",
     icon: <GithubIcon />,
@@ -16,15 +20,11 @@ const INFO = [
     url: "https://velog.io/@hyeon9782",
     icon: <VelogIcon />,
   },
-  {
-    url: "https://mail.google.com/mail/u/0/#inbox",
-    icon: <VelogIcon />,
-  },
 ];
 
 const InfoBar = () => {
   return (
-    <ul className="flex gap-[10px]">
+    <ul className="flex gap-[30px] my-[20px]">
       {INFO.map((info, index) => (
         <li key={index}>
           <Link className="text-4xl" href={info.url}>

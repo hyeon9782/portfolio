@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main>
       <IntroductionSection />
-      <ActivitySection />
       <ProjectSection />
       <StudySection />
+      <ActivitySection />
       <NotionSection />
       <CareerSection />
     </main>

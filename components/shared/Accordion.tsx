@@ -25,9 +25,12 @@ const Accordion = ({ title, children }: Props) => {
 
   return (
     <div className="flex flex-col rounded-md border border-silver overflow-hidden">
-      <div className="flex items-center p-2 box-border">
-        <div className="w-9/12 text-center">{title}</div>
-        <div className="w-3/12 text-center text-xl" onClick={handleArrowClick}>
+      <div
+        className="flex items-center p-2 box-border justify-between"
+        onClick={handleArrowClick}
+      >
+        <div className="text-center w-11/12 font-bold text-xl">{title}</div>
+        <div className="text-center w-1/12 text-xl">
           {!isCollapse ? <ArrowDownIcon /> : <ArrowUpIcon />}
         </div>
       </div>

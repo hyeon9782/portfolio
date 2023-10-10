@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Container from "../Container";
 import InfoBar from "../introduction/InfoBar";
-import { ArrowDownIcon } from "../shared/icons";
+import { DoubleArrowDownIcon } from "../shared/icons";
 
 const IntroductionSection = () => {
   return (
@@ -32,7 +32,7 @@ const IntroductionSection = () => {
             <span className="font-bold block pb-[20px]">
               제가 궁금하시다면 스크롤을 내려주세요!
             </span>
-            <ArrowDownIcon className="text-5xl animate-bounce" />
+            <DoubleArrowDownIcon className="text-5xl animate-bounce" />
           </div>
         </div>
       </Container>

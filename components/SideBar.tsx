@@ -33,8 +33,8 @@ const SideBar = () => {
     });
   };
   return (
-    <div className="fixed top-[40%] right-10">
-      <nav>
+    <div className="fixed top-[20%] right-5">
+      <nav className="bg-slate-400 rounded-xl p-[10px]">
         <ul className="flex flex-col gap-[10px]">
           {NAVS.map((nav, index) => (
             <li

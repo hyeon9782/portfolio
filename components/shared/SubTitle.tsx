@@ -5,7 +5,7 @@ type Props = {
 };
 const SubTitle = ({ children }: Props) => {
   return (
-    <div className="text-xl font-bold text-center leading-10 py-[10px]">
+    <div className="text-md font-bold text-center leading-7 py-[10px]">
       {children}
     </div>
   );

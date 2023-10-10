@@ -1,6 +1,8 @@
+import { STUDY } from "@/constants/study";
 import Container from "../Container";
 import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
+import StudyCard from "../study/StudyCard";
 
 const StudySection = () => {
   return (
@@ -15,6 +17,11 @@ const StudySection = () => {
             방법이라고 생각합니다.
           </p>
         </SubTitle>
+        <div className="flex justify-between">
+          {STUDY.map((study, index) => (
+            <StudyCard key={index} study={study} />
+          ))}
+        </div>
       </Container>
     </section>
   );

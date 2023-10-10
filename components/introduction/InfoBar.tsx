@@ -24,7 +24,7 @@ const INFO = [
 
 const InfoBar = () => {
   return (
-    <ul className="flex gap-[30px] my-[20px]">
+    <ul className="flex justify-around my-[20px]">
       {INFO.map((info, index) => (
         <li key={index}>
           <Link className="text-4xl" href={info.url}>

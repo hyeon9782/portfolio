@@ -9,23 +9,27 @@ const IntroductionSection = () => {
       <Container>
         <div className="flex flex-col justify-center h-full">
           <div className="flex gap-[30px]">
-            <Image
-              src={"/포트폴리오 사진.jpg"}
-              alt="Profile"
-              width={300}
-              height={300}
-              className="rounded-3xl"
-            />
-            <div className="flex flex-col justify-center gap-[30px]">
-              <div className="text-2xl font-bold">
-                자신의 부족함을 인정하고 끊임없이 노력하는 개발자
-              </div>
-              <div>
-                <span className="text-xl font-bold">
-                  현정호 Frontend Developer
-                </span>
-                <InfoBar />
-              </div>
+            <div>
+              <Image
+                src={"/포트폴리오 사진.jpg"}
+                alt="Profile"
+                width={300}
+                height={300}
+                className="rounded-3xl"
+              />
+              <InfoBar />
+            </div>
+            <div className="flex flex-col gap-[30px] pt-[40px]">
+              <span className="text-3xl font-bold">
+                현정호 Frontend Developer
+              </span>
+              <p className="text-xl font-bold leading-10">
+                부족함을 알기에 끊임없이 노력합니다.
+                <br />
+                새로운 것을 배우는 걸 좋아합니다.
+                <br />
+                팀원들과의 커뮤니케이션을 중시합니다.
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-center pt-[100px]">

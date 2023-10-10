@@ -14,10 +14,16 @@ const ActivitySection = () => {
             여유가 된다면 해커톤이나 오픈 소스에 참여하는 것을 즐깁니다!
           </p>
         </SubTitle>
-        <div>
-          <div>React 공식 문서 한국어 번역 참여</div>
-          <div>GEN AI Hackathon</div>
-          <div>KURLY HACK FESTA 2022</div>
+        <div className="flex flex-col gap-[20px]">
+          <div className="bg-red-400 p-[10px] rounded-md text-5xl text-center">
+            React 공식 문서 한국어 번역 참여
+          </div>
+          <div className="bg-red-400 p-[10px] rounded-md text-5xl text-center">
+            GEN AI Hackathon
+          </div>
+          <div className="bg-red-400 p-[10px] rounded-md text-5xl text-center">
+            KURLY HACK FESTA 2022
+          </div>
         </div>
       </Container>
     </section>

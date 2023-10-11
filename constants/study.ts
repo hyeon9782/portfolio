@@ -1,5 +1,15 @@
 export const STUDY = [
   {
+    name: "기술 면접 스터디",
+    period: ["2023.10", "진행 중"],
+    subject:
+      "하루에 한 번 특정 주제를 정하고 해당 주제에 대해서 공부한 후 질문 리스트를 만듭니다.",
+    systems: [
+      "Real World에서 제공하는 Template Repository Clone",
+      "자신이 원하는 기술 스택으로 해당 프로젝트에서 기능 구현",
+    ],
+  },
+  {
     name: "React World 스터디",
     period: ["2023.08", "2023.10"],
     subject:

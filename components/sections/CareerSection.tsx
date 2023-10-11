@@ -1,9 +1,8 @@
-import { WORKS } from "@/constants/works";
 import Container from "../Container";
-import Accordion from "../shared/Accordion";
 import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
 import { LongArrowDownIcon } from "../shared/icons";
+import Accordions from "../career/Accordions";
 
 const CareerSection = () => {
   return (
@@ -20,34 +19,7 @@ const CareerSection = () => {
           <div className="font-bold text-lg">
             주식회사 컨택틱 (2021.07 ~ 2022.11) [1년 5개월]
           </div>
-          <ul className="py-[20px]">
-            {WORKS.map((work, index) => {
-              return (
-                <Accordion key={index} title={work.name}>
-                  <div>
-                    <ul>
-                      <li>프로젝트 설명 : {work.explanation}</li>
-                      {work.environment && (
-                        <li>개발 환경 : {work.environment.join(", ")}</li>
-                      )}
-                      <li>
-                        <span>상세 업무</span>
-                        {work.functions.map((functionItem, index) => (
-                          <div key={index}>- {functionItem}</div>
-                        ))}
-                      </li>
-                      <li>
-                        <span>결과 및 성과</span>
-                        {work.results.map((result, index) => (
-                          <div key={index}>- {result}</div>
-                        ))}
-                      </li>
-                    </ul>
-                  </div>
-                </Accordion>
-              );
-            })}
-          </ul>
+          <Accordions />
         </div>
         <div className="flex justify-center py-[10px]">
           <LongArrowDownIcon className="text-4xl animate-bounce" />

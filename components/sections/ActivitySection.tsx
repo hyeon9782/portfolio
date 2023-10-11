@@ -1,6 +1,8 @@
+import { ACTIVITY } from "@/constants/activity";
 import Container from "../Container";
 import SubTitle from "../shared/SubTitle";
 import Title from "../shared/Title";
+import ActivityCard from "../activity/ActivityCard";
 
 const ActivitySection = () => {
   return (
@@ -15,15 +17,9 @@ const ActivitySection = () => {
           </p>
         </SubTitle>
         <div className="flex flex-col gap-[20px]">
-          <div className="bg-red-400 p-[10px] rounded-md text-5xl text-center">
-            React 공식 문서 한국어 번역 참여
-          </div>
-          <div className="bg-red-400 p-[10px] rounded-md text-5xl text-center">
-            GEN AI Hackathon
-          </div>
-          <div className="bg-red-400 p-[10px] rounded-md text-5xl text-center">
-            KURLY HACK FESTA 2022
-          </div>
+          {ACTIVITY.map((activity, index) => (
+            <ActivityCard key={index} activity={activity} />
+          ))}
         </div>
       </Container>
     </section>

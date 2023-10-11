@@ -4,14 +4,16 @@ import { ArrowDownIcon, ArrowUpIcon } from "./icons";
 type Props = {
   title: string;
   children: ReactNode;
+  index: number;
 };
-const Accordion = ({ title, children }: Props) => {
+const Accordion = ({ title, children, index }: Props) => {
   const parentRef = useRef<HTMLDivElement>(null);
   const childRef = useRef<HTMLDivElement>(null);
   const [isCollapse, setIsCollapse] = useState<boolean>(false);
 
   const handleArrowClick = (e: MouseEvent) => {
     e.stopPropagation();
+
     if (parentRef.current === null || childRef.current === null) {
       return;
     }

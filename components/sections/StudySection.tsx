@@ -17,7 +17,7 @@ const StudySection = () => {
             방법이라고 생각합니다.
           </p>
         </SubTitle>
-        <div className="flex justify-between">
+        <div className="flex justify-between overflow-scroll">
           {STUDY.map((study, index) => (
             <StudyCard key={index} study={study} index={index} />
           ))}

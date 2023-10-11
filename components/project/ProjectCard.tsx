@@ -17,6 +17,7 @@ const ProjectCard = ({
 }) => {
   const targetRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+
   const show = () => {
     setIsVisible(true);
   };
@@ -34,7 +35,9 @@ const ProjectCard = ({
       className={`${
         isVisible
           ? "opacity-100 translate-x-0"
-          : "opacity-0 translate-x-[-100%]"
+          : `opacity-0 ${
+              isLeft ? "translate-x-[-100%]" : "translate-x-[100%]"
+            } `
       } transition-all duration-1000 bg-white rounded-xl p-[10px] flex gap-[20px] w-[50%] h-[200px] ${
         isLeft ? "self-start" : "self-end"
       }`}

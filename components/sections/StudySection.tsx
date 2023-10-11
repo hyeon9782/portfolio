@@ -19,7 +19,7 @@ const StudySection = () => {
         </SubTitle>
         <div className="flex justify-between">
           {STUDY.map((study, index) => (
-            <StudyCard key={index} study={study} />
+            <StudyCard key={index} study={study} index={index} />
           ))}
         </div>
       </Container>

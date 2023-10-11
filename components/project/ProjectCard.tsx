@@ -1,4 +1,7 @@
+"use client";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import Image from "next/image";
+import { useRef, useState } from "react";
 type Project = {
   name: string;
   explanation: string;
@@ -12,10 +15,28 @@ const ProjectCard = ({
   project: Project;
   index: number;
 }) => {
+  const targetRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const show = () => {
+    setIsVisible(true);
+  };
+
+  const hide = () => {
+    setIsVisible(false);
+  };
+
+  const isLeft = index % 2 === 0;
+
+  useIntersectionObserver(show, hide, targetRef);
   return (
     <div
-      className={`bg-white rounded-xl p-[10px] flex gap-[20px] w-[50%] h-[200px] ${
-        index % 2 === 0 ? "self-start" : "self-end"
+      ref={targetRef}
+      className={`${
+        isVisible
+          ? "opacity-100 translate-x-0"
+          : "opacity-0 translate-x-[-100%]"
+      } transition-all duration-1000 bg-white rounded-xl p-[10px] flex gap-[20px] w-[50%] h-[200px] ${
+        isLeft ? "self-start" : "self-end"
       }`}
     >
       <Image

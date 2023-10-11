@@ -1,4 +1,3 @@
-import { PROJECTS } from "@/constants/projects";
 import Image from "next/image";
 type Project = {
   name: string;

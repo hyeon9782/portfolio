@@ -7,6 +7,19 @@ export const PROJECTS = [
     functions: ["다양한 애니메이션"],
   },
   {
+    name: "Next World",
+    explanation:
+      "Real World에서 제공해주는 백엔드 API를 활용하여 제가 원하는 기술 스택으로 개발한 블로그 형식의 웹입니다.",
+    skills: [
+      "TypeScript",
+      "Next.js",
+      "React Query",
+      "Zustand",
+      "Vanilla Extract",
+    ],
+    functions: ["다양한 애니메이션"],
+  },
+  {
     name: "Travel Mate",
     explanation: "자신만의 여행 코스를 기획할 수 있게 도움을 주는 웹 서비스",
     skills: ["TypeScript", "React", "Node.js", "Express"],

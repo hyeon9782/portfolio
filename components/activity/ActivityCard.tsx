@@ -22,8 +22,8 @@ const ActivityCard = ({ activity }: { activity: Activity }) => {
     <div
       ref={targetRef}
       className={`${
-        isVisible ? "opacity-100 scale-x-[1]" : "opacity-0 scale-x-0"
-      }bg-red-400 p-[10px] rounded-md text-5xl text-center transition-all duration-1000`}
+        isVisible ? "opacity-100 scale-y-[1]" : "opacity-0 scale-y-0"
+      } bg-red-400 p-[10px] rounded-md text-5xl text-center transition-all duration-1000`}
     >
       {activity.name}
     </div>

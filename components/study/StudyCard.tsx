@@ -2,7 +2,7 @@
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import { useRef, useState } from "react";
 
-type Study = {
+export type Study = {
   name: string;
   period: string[];
   subject: string;
@@ -32,7 +32,7 @@ const StudyCard = ({
         isVisible ? "opacity-100 scale-x-[1] " : "opacity-0 scale-x-0"
       } ${selectDelay(
         index
-      )} w-[200px] h-[300px] bg-white rounded-md p-[10px] box-border transition-all duration-1000`}
+      )} w-[300px] h-[300px] bg-white rounded-md p-[10px] transition-all duration-1000`}
     >
       <div className={`text-3xl ${isVisible ? "block" : "hidden"}`}>{name}</div>
       <div></div>

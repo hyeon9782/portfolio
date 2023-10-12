@@ -2,6 +2,7 @@
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import Image from "next/image";
 import { useRef, useState } from "react";
+import Tag from "./Tag";
 type Project = {
   name: string;
   explanation: string;
@@ -53,7 +54,9 @@ const ProjectCard = ({
         <p>{explanation}</p>
         <ul className="flex gap-[10px] flex-wrap">
           {skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
+            <li key={index}>
+              <Tag text={skill} />
+            </li>
           ))}
         </ul>
         <div className="flex gap-[10px]">
